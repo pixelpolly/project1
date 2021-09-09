@@ -1,0 +1,36 @@
+## Docker commands used to build the application 
+# docker build -t techtrends .
+
+## Docker commands used to run the application
+docker run -d -p 7111:3111 techtrends
+
+## Docker commands used to get the application logs
+$ docker logs -f dd1bd96cd450
+
+## Logs from the container running the TechTrends application
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2021-09-06 14:03:34,371 - werkzeug -  * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-09-06 14:04:14,865 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:14] "GET / HTTP/1.1" 200 -
+2021-09-06 14:04:14,903 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:14] "GET /static/css/main.css HTTP/1.1" 200 -
+2021-09-06 14:04:14,971 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:14] "GET /favicon.ico HTTP/1.1" 404 -
+2021-09-06 14:04:27,062 - app - 2020 CNCF Annual Report Article retrieved
+2021-09-06 14:04:27,064 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:27] "GET /1 HTTP/1.1" 200 -
+2021-09-06 14:04:30,540 - app - KubeCon + CloudNativeCon 2021 Article retrieved
+2021-09-06 14:04:30,542 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:30] "GET /2 HTTP/1.1" 200 -
+2021-09-06 14:04:34,253 - app - CNCF Cloud Native Interactive Landscape Article retrieved
+2021-09-06 14:04:34,254 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:34] "GET /4 HTTP/1.1" 200 -
+2021-09-06 14:04:37,294 - app - Kubernetes v1.20 Release Notes Article retrieved
+2021-09-06 14:04:37,295 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:37] "GET /3 HTTP/1.1" 200 -
+2021-09-06 14:04:40,299 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:40] "GET /create HTTP/1.1" 200 -
+2021-09-06 14:04:49,179 - app - Test Article created
+2021-09-06 14:04:49,182 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:49] "POST /create HTTP/1.1" 302 -
+2021-09-06 14:04:49,189 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:49] "GET / HTTP/1.1" 200 -
+2021-09-06 14:04:56,835 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:04:56] "GET /metrics HTTP/1.1" 200 -
+2021-09-06 14:05:01,750 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:05:01] "GET /healthz HTTP/1.1" 200 -
+2021-09-06 14:05:09,265 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:05:09] "GET /bon HTTP/1.1" 404 -
+2021-09-06 14:05:14,103 - werkzeug - 172.17.0.1 - - [06/Sep/2021 14:05:14] "GET / HTTP/1.1" 200 -
+
